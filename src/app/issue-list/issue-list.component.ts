@@ -33,7 +33,7 @@ export class IssueListComponent implements OnInit {
   onConfirm(confirmed: boolean){
     if (confirmed && this.selectedIssue){
       this.issueService.completedIssue(this.selectedIssue);
-      
+      this.getIssues();
     }
     this.selectedIssue = null;
   }
